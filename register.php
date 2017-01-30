@@ -1,14 +1,17 @@
 <?php
-/*
-	CENSORED
-*/
+
+	$_db_host = "localhost";
+	$_db_datenbank = "d024f4ae";
+	$_db_username = "d024f4ae";
+	$_db_password = "Andre1337!";
+
 
 session_start();
 
 
 $connection = mysql_connect($_db_host, $_db_username, $_db_password);
 
-	$error = false;
+
 
 if(isset($_POST['submit'])){
 
@@ -20,10 +23,10 @@ if(isset($_POST['submit'])){
 
 	if (empty($username)) {
 		$error = true;
-		echo '1';
+		echo 'Bitte geben Sie ein Benutzernamen ein.';
 	} else if (strlen($username) < 3) {
 		$error = true;
-		echo '2';
+		echo 'Ihr Benutzername muss aus mindestens 3 Buchstaben bestehen.';
 	} 
 	
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -32,17 +35,18 @@ if(isset($_POST['submit'])){
 	} 
 
 	if(strlen($password) == 0) {
-
 		$error = true;
-		echo '4';
+		echo 'Bitte geben Sie ein Passwort ein.';
+		
 	} else if(strlen($password) < 6) {
 		$error = true;
-		echo '5';
+		echo 'Ihr Passwort muss aus mindestens 6 Buchstaben bestehen.';
 	}
 
 	if($password != $password2) {
-		echo '6';
 		$error = true;
+		echo 'Die Passwörter stimmen nicht überein!';
+		
 	}
 	
 
@@ -53,13 +57,15 @@ if(isset($_POST['submit'])){
 
 
 	if($res) {
-//		echo '7';
+		header ("Locaton: profile.php");
+		
 		unset($username);
 		unset($password);
 		unset($password2);
 		unset($email);
+		
 	} else {
-		echo '8';
+		echo 'Fehler bei der Registrierung! Versuchen Sie es erneut.';
 		
 	}
 
@@ -354,7 +360,11 @@ if(isset($_POST['submit'])){
 			<label>E-Mail</label>
 				<input id="email" name="email" placeholder="test@web.de" type="email">
 			<input name="submit" type="submit" value=" Registrieren ">
-				<span><?php echo $error; ?></span>
+				<span>
+					<?php
+						echo $error;
+					?>
+				</span>
 				
 		</form>
 	</div>
