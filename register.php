@@ -47,12 +47,6 @@ if(isset($_POST['submit'])){
 	
 
 	if(!$error){
-	/*Du musst die Datenbank auswählen:
-	 * Verbindung
-	 * Datenbank
-	 * Tabelle
-	 * QUERY
-	*/
 	mysql_select_db($_db_datenbank);
 	$query = "INSERT INTO users(username, password, password2, email) VALUES('$username', '$password', '$password2', '$email')";
 	$res = mysql_query($query);
