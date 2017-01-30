@@ -1,0 +1,14 @@
+.textbox {
+	width: 600px; 
+	height: 560px; 
+	background-color: white; 
+	margin: 0 auto; 
+	border-radius: 6px; 
+	border-top: 3px solid #D7D8DA; 
+	border-bottom: 3px solid #D7D8DA;
+}
+
+.textbox:hover {
+	border-top: 3px solid #3DBD99;
+	border-bottom: 3px solid #3DBD99;
+}

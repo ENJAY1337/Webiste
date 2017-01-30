@@ -1,0 +1,11 @@
+#gradient {  
+background: #eee;
+border: 1px solid #DDD;
+background: -moz-linear-gradient(top, #EEE, #FFF);    
+background: -webkit-linear-gradient(top, #eee, #fff);
+background: -ms-linear-gradient(top, #eee, #fff);
+background: -o-linear-gradient(top, #eee, #fff);
+box-shadow: 1px 2px 4px rgba(0,0,0, .2);
+border-radius: 6px;
+}
+ 
