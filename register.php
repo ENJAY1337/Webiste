@@ -30,7 +30,8 @@ if(isset($_POST['submit'])){
 	} 
 	
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		echo '3';
+		$test = echo 'Bitte geben Sie eine korrekte E-Mail-Adresse an.';
+		$error = 
 		$error = true;
 	} 
 
