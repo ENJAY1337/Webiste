@@ -30,9 +30,9 @@ if(isset($_POST['submit'])){
 	} 
 	
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$test = echo 'Bitte geben Sie eine korrekte E-Mail-Adresse an.';
-		$error = 
+		echo 'Bitte geben Sie eine korrekte E-Mail-Adresse an.';
 		$error = true;
+		
 	} 
 
 	if(strlen($password) == 0) {
@@ -66,6 +66,7 @@ if(isset($_POST['submit'])){
 		unset($email);
 		
 	} else {
+		$error = true;
 		echo 'Fehler bei der Registrierung! Versuchen Sie es erneut.';
 		
 	}
@@ -365,6 +366,7 @@ if(isset($_POST['submit'])){
 					<?php
 						echo $error;
 					?>
+					Test
 				</span>
 				
 		</form>
