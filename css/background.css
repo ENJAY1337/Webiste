@@ -1,0 +1,10 @@
+.multi-bgs {
+    background-image: url(/enis/bilder/header.jpg), url(/enis/bilder/slidetop.jpg), url(/enis/bilder/slidebottom.jpg), url(/enis/bilder/footer2.png), url(/enis/bilder/footer.png), url(/enis/bilder/bg.jpg);
+    background-position: top, 0px 200px, 0px 510px, 0px 1400px, 0px 1400px, 0px 0px;
+    background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat;
+}
+
+.logo {
+	margin-left: 400px;
+	margin-top: 50px;
+}

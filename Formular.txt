@@ -1,0 +1,11 @@
+<div id="login">
+<form action="" method="post">
+<label>Username:</label>
+<input id="name" name="username" placeholder="Username" type="text">
+<label>Password:</label>
+<input id="password" name="password" placeholder="**********" type="password">
+<input name="submit" type="submit" value=" Login ">
+<a href="/xampp/htdocs/register.php" id="register">Registrieren</a>
+<span><?php echo $error; ?></span>
+</form>
+</div>
