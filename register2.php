@@ -1,9 +1,6 @@
-﻿<?php
-	$_db_host = "localhost";
-	$_db_datenbank = "d024f4ae";
-	$_db_username = "d024f4ae";
-	$_db_password = "Andre1337!";
-
+﻿<?php/*
+ CENSORED
+ */
 session_start();
 
 
